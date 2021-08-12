@@ -30,9 +30,20 @@
     It will remove the new node at the end of the linked list.
 
 ```js
+
+
+
+
+
+
+
 // Your code goes here
 
 // Test
+
+
+
+
 let list = new LinkedList(10);
 list.insertHead(9);
 list.insertHead(8);
