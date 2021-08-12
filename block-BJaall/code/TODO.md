@@ -24,7 +24,17 @@ step-4: Now we will repeat the step 1, 2 and 3 but we will keep in mind not to t
 
 ```js
 function bubbleSort() {
-  // your code
+  let len = arr.length;
+  for (let i = len - 1; i >= 0; i--) {
+    for (let j = 1; j <= i; j++) {
+      if (arr[j - 1] > arr[j]) {
+        let temp = arr[j - 1];
+        arr[j - 1] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
 }
 ```
 
@@ -32,7 +42,21 @@ function bubbleSort() {
 
 ```js
 function selectionSort() {
-  // your code
+  let minIdx,
+    temp,
+    len = arr.length;
+  for (let i = 0; i < len; i++) {
+    minIdx = i;
+    for (let j = i + 1; j < len; j++) {
+      if (arr[j] < arr[minIdx]) {
+        minIdx = j;
+      }
+    }
+    temp = arr[i];
+    arr[i] = arr[minIdx];
+    arr[minIdx] = temp;
+  }
+  return arr;
 }
 ```
 
@@ -40,7 +64,17 @@ function selectionSort() {
 
 ```js
 function insertionSort() {
-  // your code
+  let n = arr.length;
+  for (let i = 1; i < n; i++) {
+    let current = arr[i];
+    let j = i - 1;
+    while (j > -1 && current < arr[j]) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+    inputArr[j + 1] = current;
+  }
+  return inputArr;
 }
 ```
 
