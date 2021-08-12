@@ -24,7 +24,30 @@ step-5: After repeating all the above steps you will get a sorted array
 
 ```js
 function mergeSort() {
-  // your code
+  const c = [];
+
+  while (a.length && b.length) {
+    c.push(a[0] > b[0] ? b.shift() : a.shift());
+  }
+
+  while (a.length) {
+    c.push(a.shift());
+  }
+  while (b.length) {
+    c.push(b.shift());
+  }
+
+  return c;
+}
+
+function mergeSort(a) {
+  if (a.length < 2) return a;
+  const middle = Math.floor(a.length / 2);
+  const a_l = a.slice(0, middle);
+  const a_r = a.slice(middle, a.length);
+  const sorted_l = mergeSort(a_l);
+  const sorted_r = mergeSort(a_r);
+  return merge(sorted_l, sorted_r);
 }
 ```
 
@@ -32,7 +55,18 @@ function mergeSort() {
 
 ```js
 function quickSort() {
-  // your code
+  const list = [...originalList];
+
+  if (list.length < 2) {
+    return list;
+  }
+
+  const pivot = list[0];
+
+  const smaller = list.filter((item) => item < pivot);
+  const bigger = list.filter((item) => item > pivot);
+
+  return [...quickSort(smaller), pivot, ...quickSort(bigger)];
 }
 ```
 
