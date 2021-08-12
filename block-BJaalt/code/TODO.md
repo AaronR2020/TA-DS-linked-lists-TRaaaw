@@ -46,5 +46,5 @@ Example:
 
 ```js
 // Test
-reverseWords("I love JavaScript!"); // "I evol !tpircSavaJ"
+reverseWords("I love Ja  vaScript!"); // "I evol !tpircSavaJ"
 ```
