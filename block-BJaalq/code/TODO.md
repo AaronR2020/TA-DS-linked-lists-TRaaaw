@@ -10,11 +10,7 @@ Using the linked list class you created in the previous exercise implement stack
 **YOU HAVE TO USE LINKED LIST TO STORE DATA**
 
 ```js
-class Stack {
-  // your code goes here
-}
-
-// Test 1
+class Stack {}
 
 const stack = new Stack();
 
@@ -22,10 +18,12 @@ stack.add(10);
 stack.add(12);
 stack.add(120);
 stack.add(1);
+
 stack.add(4);
 
 console.log(stack.remove()); // => 4
 console.log(stack.length); // => 4
+
 console.log(stack.remove()); // => 1
 console.log(stack.length); // => 3
 
